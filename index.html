@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивная инфографика: Популярные инструменты веб-дизайна (2009–2025)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Популярные инструменты веб-дизайна (2009–2025)</h1>
+  </header>
+  <section id="infographic-container">
+    <div id="controls">
+      <svg id="prev-year" width="30" height="30" viewBox="0 0 30 30" class="arrow">
+        <polygon points="20,5 10,15 20,25" fill="#fff" />
+      </svg>
+      <button id="play-pause" title="Воспроизведение/Пауза">
+        <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" class="play-pause-icon">
+          <polygon points="6,2 22,12 6,22" fill="#fff" />
+        </svg>
+        <svg id="pause-icon" width="24" height="24" viewBox="0 0 24 24" class="play-pause-icon" style="display: none;">
+          <rect x="6" y="2" width="4" height="20" fill="#fff" />
+          <rect x="14" y="2" width="4" height="20" fill="#fff" />
+        </svg>
+      </button>
+      <svg id="next-year" width="30" height="30" viewBox="0 0 30 30" class="arrow">
+        <polygon points="10,5 20,15 10,25" fill="#fff" />
+      </svg>
+    </div>
+    <svg viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet" id="chart">
+
+      <text x="450" y="40" font-size="24" text-anchor="middle" fill="#2a4365" class="chart-title">
+        Популярность инструментов веб-дизайна
+      </text>
+
+      <line x1="50" y1="500" x2="850" y2="500" class="axis" stroke="#333" stroke-width="2" />
+      <line x1="50" y1="100" x2="50" y2="500" class="axis" stroke="#333" stroke-width="2" />
+      <text x="40" y="90" font-size="16" text-anchor="end" fill="#333" class="axis-label">100%</text>
+      <text x="40" y="300" font-size="16" text-anchor="end" fill="#333" class="axis-label">50%</text>
+      <text x="40" y="510" font-size="16" text-anchor="end" fill="#333" class="axis-label">0%</text>
+
+      <g id="figma" class="bar">
+        <rect x="150" y="500" width="120" height="0" fill="#FF5733" class="bar-rect" />
+        <text x="210" y="520" text-anchor="middle" class="bar-label">Figma</text>
+        <text x="210" y="490" text-anchor="middle" class="bar-value" style="opacity: 0;">0%</text>
+      </g>
+      <g id="sketch" class="bar">
+        <rect x="300" y="500" width="120" height="0" fill="#FFC107" class="bar-rect" />
+        <text x="360" y="520" text-anchor="middle" class="bar-label">Sketch</text>
+        <text x="360" y="490" text-anchor="middle" class="bar-value" style="opacity: 0;">0%</text>
+      </g>
+      <g id="adobexd" class="bar">
+        <rect x="450" y="500" width="120" height="0" fill="#8A2BE2" class="bar-rect" />
+        <text x="510" y="520" text-anchor="middle" class="bar-label">Adobe XD</text>
+        <text x="510" y="490" text-anchor="middle" class="bar-value" style="opacity: 0;">0%</text>
+      </g>
+      <g id="others" class="bar">
+        <rect x="600" y="500" width="120" height="0" fill="#00CED1" class="bar-rect" />
+        <text x="660" y="520" text-anchor="middle" class="bar-label">Другие</text>
+        <text x="660" y="490" text-anchor="middle" class="bar-value" style="opacity: 0;">0%</text>
+      </g>
+
+      <text x="450" y="570" font-size="24" text-anchor="middle" id="current-year" fill="#333" class="current-year">2009</text>
+    </svg>
+    <div id="tool-info" class="tool-info"></div>
+  </section>
+  <div id="tooltip" class="tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
